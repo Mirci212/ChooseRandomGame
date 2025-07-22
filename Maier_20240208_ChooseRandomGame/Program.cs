@@ -8,7 +8,7 @@ do
     string[] games = Directory.GetFiles(path);
     int rand = Random.Shared.Next(0, games.Length);
     Console.WriteLine();
-    Console.WriteLine($"Heutiges Game: {games[rand]}");
+    Console.WriteLine($"Heutiges Game: {Path.GetFileNameWithoutExtension(games[rand])}");
     Console.Write("Willst du es starten?[y/n] ");
     if (char.ToLower(Console.ReadKey().KeyChar) == 'y')
     {
